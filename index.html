@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Scrum — Human-AI Collaboration Framework</title>
+  <meta name="description" content="A framework for autonomous human-AI software development using GitHub Copilot CLI. The AI runs sprints. You set direction.">
+  <meta property="og:title" content="AI-Scrum — Human-AI Collaboration Framework">
+  <meta property="og:description" content="The AI runs sprints. You set direction. A Scrum-inspired framework for GitHub Copilot CLI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://trsdn.github.io/ai-scrum/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-icon">⚡</span> AI-Scrum
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#sprint">Sprint Cycle</a>
+        <a href="#start">Get Started</a>
+        <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="nav-gh">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-badge">Open Source Framework</div>
+      <h1>AI-Scrum<br><span class="gradient-text">Autonomous</span></h1>
+      <p class="hero-subtitle">The AI runs sprints. You set direction.<br>A Scrum-inspired framework for human-AI collaboration using GitHub Copilot CLI.</p>
+      <div class="hero-cta">
+        <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          Use Template
+        </a>
+        <a href="#manifesto" class="btn btn-secondary">Read the Manifesto</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">11</span>
+          <span class="stat-label">Custom Agents</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">19</span>
+          <span class="stat-label">Prompts</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Ceremonies</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Principles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What This Is -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">What This Is</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3>AI as PO + Scrum Master</h3>
+          <p>The AI agent owns the sprint cycle end-to-end. It triages the backlog, plans sprints, executes issues, runs retros, and improves its own process. You're the stakeholder — you set direction, not details.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <h3>Real Scrum, Not Theater</h3>
+          <p>Sprint Planning, Daily Huddles, Sprint Review, Retrospectives — all adapted for human-AI dynamics. Each ceremony has a purpose. Nothing exists because "that's how Scrum works."</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>Template Repository</h3>
+          <p>Fork it, customize the placeholders, and you have a fully configured AI development process. Agents, prompts, process docs, sprint templates — everything included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operating Model -->
+  <section class="section section-alt" id="model">
+    <div class="container">
+      <h2 class="section-title">The Operating Model</h2>
+      <p class="section-intro">Two roles. Clear boundaries. No ambiguity about who decides what.</p>
+      <div class="model-grid">
+        <div class="model-role">
+          <div class="role-header human">
+            <span class="role-emoji">👤</span>
+            <h3>You (Stakeholder)</h3>
+          </div>
+          <ul>
+            <li>Set strategic direction</li>
+            <li>Review sprint deliverables</li>
+            <li>Accept or reject at sprint review</li>
+            <li>Provide domain context when asked</li>
+            <li>Create issues for new ideas</li>
+          </ul>
+        </div>
+        <div class="model-divider">
+          <div class="divider-line"></div>
+          <div class="divider-icon">⚡</div>
+          <div class="divider-label">Escalation<br>Boundary</div>
+          <div class="divider-line"></div>
+        </div>
+        <div class="model-role">
+          <div class="role-header ai">
+            <span class="role-emoji">🤖</span>
+            <h3>AI Agent (PO + SM)</h3>
+          </div>
+          <ul>
+            <li>Triage and prioritize backlog</li>
+            <li>Plan and execute sprints</li>
+            <li>Write code, tests, and docs</li>
+            <li>Run retros and improve process</li>
+            <li>Escalate only on MUST criteria</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto -->
+  <section class="section section-manifesto" id="manifesto">
+    <div class="container">
+      <h2 class="section-title">The AI-Scrum Manifesto</h2>
+      <p class="manifesto-intro">Inspired by the <a href="https://agilemanifesto.org">Agile Manifesto</a> (2001) — adapted for human-AI collaboration.</p>
+      
+      <div class="values">
+        <div class="value">
+          <div class="value-main">Autonomous execution</div>
+          <div class="value-over">over</div>
+          <div class="value-secondary">constant approval</div>
+        </div>
+        <div class="value">
+          <div class="value-main">Verified evidence</div>
+          <div class="value-over">over</div>
+          <div class="value-secondary">claimed completion</div>
+        </div>
+        <div class="value">
+          <div class="value-main">Sprint discipline</div>
+          <div class="value-over">over</div>
+          <div class="value-secondary">feature chasing</div>
+        </div>
+        <div class="value">
+          <div class="value-main">Continuous improvement</div>
+          <div class="value-over">over</div>
+          <div class="value-secondary">static workflows</div>
+        </div>
+      </div>
+
+      <div class="manifesto-note">
+        <p>That is, while there is value in the items on the right, we value the items on the left more.</p>
+      </div>
+
+      <div class="principles">
+        <h3>12 Principles Behind the Manifesto</h3>
+        <div class="principles-grid">
+          <div class="principle">
+            <span class="principle-num">01</span>
+            <p>The best architecture emerges from <strong>small, tested diffs</strong> — not grand rewrites.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">02</span>
+            <p><strong>Quality gates are non-negotiable.</strong> Every feature gets tests. Every PR gets CI. Every claim gets verification.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">03</span>
+            <p>The human brings <strong>judgment</strong>; the agent brings <strong>throughput</strong>. Play to each side's strengths.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">04</span>
+            <p><strong>Documentation is not overhead — it's memory.</strong> The agent has no memory between sessions.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">05</span>
+            <p><strong>Escalation is a feature, not a failure.</strong> MUST-escalate criteria protect the project from autonomous overreach.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">06</span>
+            <p><strong>Process improvements compound.</strong> Each retro makes the next sprint better. Sprint 10 is radically smoother than Sprint 1.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">07</span>
+            <p><strong>Evidence before assertions, always.</strong> Never say "done" without proof. Trust, but verify — on both sides.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">08</span>
+            <p><strong>The backlog is sacred.</strong> Ideas don't get lost — they get queued. If it's not an issue, it doesn't exist.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">09</span>
+            <p><strong>Velocity is descriptive, not prescriptive.</strong> Track it to understand capacity. Don't use it to pressure.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">10</span>
+            <p>The agent is <strong>not a junior developer</strong> — it's a different kind of collaborator. Design the process for what it actually is.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">11</span>
+            <p><strong>Welcome scope changes</strong> — route them through the backlog, not mid-sprint pivots.</p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">12</span>
+            <p><strong>Simplicity — maximize the work not done.</strong> Every line of code is a liability; every automation is an asset.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sprint Cycle -->
+  <section class="section section-alt" id="sprint">
+    <div class="container">
+      <h2 class="section-title">The Sprint Cycle</h2>
+      <p class="section-intro">Four ceremonies. Each has a slash command. The AI runs the cycle autonomously.</p>
+      <div class="cycle">
+        <div class="cycle-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Sprint Planning</h3>
+            <p>AI triages backlog, scores issues (ICE), selects scope, assigns labels and milestones.</p>
+            <code>/sprint-planning</code>
+          </div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Sprint Execution</h3>
+            <p>AI implements issues with quality gates. Huddle after each issue. Tests required for every feature.</p>
+            <code>/sprint-start</code>
+          </div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Sprint Review</h3>
+            <p>Demo deliverables, metrics, velocity tracking. Stakeholder accepts or requests changes.</p>
+            <code>/sprint-review</code>
+          </div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Sprint Retro</h3>
+            <p>What went well, what didn't. Process improvements. The process that improves itself.</p>
+            <code>/sprint-retro</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section-title">What's Included</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>🤖 11 Custom Agents</h3>
+          <div class="tag-cloud">
+            <span class="tag">code-developer</span>
+            <span class="tag">test-engineer</span>
+            <span class="tag">documentation-agent</span>
+            <span class="tag">security-reviewer</span>
+            <span class="tag">research-agent</span>
+            <span class="tag">architect</span>
+            <span class="tag">release-agent</span>
+            <span class="tag">challenger</span>
+            <span class="tag">ci-fixer</span>
+            <span class="tag">copilot-customization-builder</span>
+            <span class="tag tag-new">+ your own</span>
+          </div>
+        </div>
+        <div class="feature">
+          <h3>⚡ 19 Prompts</h3>
+          <div class="tag-cloud">
+            <span class="tag tag-ceremony">sprint-planning</span>
+            <span class="tag tag-ceremony">sprint-start</span>
+            <span class="tag tag-ceremony">sprint-review</span>
+            <span class="tag tag-ceremony">sprint-retro</span>
+            <span class="tag">orchestrate-feature</span>
+            <span class="tag">orchestrate-bugfix</span>
+            <span class="tag">code-review</span>
+            <span class="tag">create-pr</span>
+            <span class="tag">tdd-workflow</span>
+            <span class="tag">architecture-review</span>
+            <span class="tag">direction-gate</span>
+            <span class="tag">issue-triage</span>
+            <span class="tag">web-research</span>
+            <span class="tag">writing-plans</span>
+            <span class="tag tag-new">+ 5 more</span>
+          </div>
+        </div>
+        <div class="feature">
+          <h3>📜 Process Constitution</h3>
+          <div class="feature-list">
+            <div class="feature-item">Stakeholder Model with escalation rules</div>
+            <div class="feature-item">ICE scoring for prioritization</div>
+            <div class="feature-item">Definition of Done checklist</div>
+            <div class="feature-item">Label-based status tracking</div>
+            <div class="feature-item">Milestone-based sprint grouping</div>
+            <div class="feature-item">Sprint documentation templates</div>
+          </div>
+        </div>
+        <div class="feature">
+          <h3>🛡️ Quality Gates</h3>
+          <div class="feature-list">
+            <div class="feature-item">Verification before completion</div>
+            <div class="feature-item">Challenger agent for adversarial review</div>
+            <div class="feature-item">Direction gate for strategic pivots</div>
+            <div class="feature-item">CI gate before merge</div>
+            <div class="feature-item">YAGNI + Boy Scout principles</div>
+            <div class="feature-item">Evidence-based assertions only</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Getting Started -->
+  <section class="section section-alt" id="start">
+    <div class="container">
+      <h2 class="section-title">Getting Started</h2>
+      <div class="steps-vertical">
+        <div class="step-v">
+          <div class="step-v-num">1</div>
+          <div class="step-v-content">
+            <h3>Use the Template</h3>
+            <pre><code>gh repo create my-project \
+  --template trsdn/copilot-scrum-autonomous \
+  --public --clone</code></pre>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-num">2</div>
+          <div class="step-v-content">
+            <h3>Replace Placeholders</h3>
+            <p>Search for <code>{{PROJECT_NAME}}</code>, <code>{{PROJECT_DESCRIPTION}}</code>, and <code>{{OWNER}}</code> across all files and replace with your values.</p>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-num">3</div>
+          <div class="step-v-content">
+            <h3>Create Labels</h3>
+            <pre><code>gh label create "status:planned" --color "0E8A16"
+gh label create "status:in-progress" --color "FBCA04"
+gh label create "status:validation" --color "1D76DB"
+gh label create "priority:high" --color "B60205"
+gh label create "priority:medium" --color "F9D0C4"
+gh label create "priority:low" --color "C5DEF5"</code></pre>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-num">4</div>
+          <div class="step-v-content">
+            <h3>Start Your First Sprint</h3>
+            <pre><code># Open GitHub Copilot CLI in your repo:
+/sprint-planning</code></pre>
+            <p>The AI will triage your backlog, score issues, propose a sprint scope, and wait for your approval.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Variants -->
+  <section class="section" id="variants">
+    <div class="container">
+      <h2 class="section-title">Two Variants</h2>
+      <div class="variant-grid">
+        <div class="card variant-card variant-active">
+          <div class="variant-badge">This Template</div>
+          <div class="card-icon">🤖</div>
+          <h3>Autonomous</h3>
+          <p>AI is PO + Scrum Master. Human is stakeholder. The AI runs sprints end-to-end and only escalates on MUST criteria.</p>
+          <div class="variant-best">Best for: Solo projects, side projects, autonomous workflows</div>
+          <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="btn btn-primary">Use Template →</a>
+        </div>
+        <div class="card variant-card">
+          <div class="card-icon">🎯</div>
+          <h3>Guided</h3>
+          <p>Human is PO. AI is Scrum Master + developer. You drive each phase with slash commands and approval gates.</p>
+          <div class="variant-best">Best for: Team projects, learning the framework, hands-on control</div>
+          <a href="https://github.com/trsdn/copilot-scrum-guided" class="btn btn-secondary">View Guided →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">⚡ AI-Scrum</div>
+      <p>Built with 🤖 + 👤 collaboration — the process that built itself.</p>
+      <p class="footer-links">
+        <a href="https://github.com/trsdn/copilot-scrum-autonomous">Autonomous Template</a> ·
+        <a href="https://github.com/trsdn/copilot-scrum-guided">Guided Template</a> ·
+        <a href="https://github.com/trsdn/ai-scrum">This Site's Source</a>
+      </p>
+      <p class="footer-copy">MIT License · Made by <a href="https://github.com/trsdn">trsdn</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
