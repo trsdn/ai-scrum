@@ -737,17 +737,43 @@ gh issue list --milestone "Sprint 5" --state closed</code></pre>
       <h2 class="section-title">Choose Your Style</h2>
       <p class="section-intro">Same process, same constitution, same quality gates — different level of human involvement.</p>
       <div class="variant-grid">
-        <div class="card variant-card">
-          <div class="card-icon">🤖</div>
-          <h3>Autonomous</h3>
-          <p>AI agent team runs sprints end-to-end — a lead agent as PO + SM dispatches specialized sub-agents for code, tests, security, and reviews. Only escalates on MUST criteria. Sprint reviews are async notifications.</p>
+        <div class="card variant-card variant-autonomous">
+          <div class="variant-header">
+            <div class="card-icon">🤖</div>
+            <h3>Autonomous</h3>
+            <p class="variant-tagline">AI drives. You review.</p>
+          </div>
+          <p>AI agent team runs sprints end-to-end — lead agent acts as PO + SM, dispatches sub-agents for code, tests, security, and reviews. Only escalates on MUST criteria.</p>
+          <ul class="variant-features">
+            <li><span class="check">✓</span> AI initiates all ceremonies</li>
+            <li><span class="check">✓</span> Sprint reviews via async notification</li>
+            <li><span class="check">✓</span> Autonomous scope &amp; priority decisions</li>
+            <li><span class="check">✓</span> MUST-escalation safety net</li>
+            <li><span class="muted">—</span> No per-step human approval</li>
+          </ul>
+          <div class="variant-who">
+            <strong>You are:</strong> Stakeholder — set direction, review results
+          </div>
           <div class="variant-best">Best for: Solo projects, side projects, autonomous workflows</div>
           <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="btn btn-primary">Use Autonomous Template →</a>
         </div>
-        <div class="card variant-card">
-          <div class="card-icon">🎯</div>
-          <h3>Guided</h3>
-          <p>Human is PO. AI is Scrum Master + developer. You drive each phase with slash commands, approve scope, and control execution. Every ceremony needs your consent.</p>
+        <div class="card variant-card variant-guided">
+          <div class="variant-header">
+            <div class="card-icon">🎯</div>
+            <h3>Guided</h3>
+            <p class="variant-tagline">You drive. AI executes.</p>
+          </div>
+          <p>Human is PO. AI is Scrum Master + developer. You trigger each phase with slash commands, approve scope, and control execution. Every ceremony requires your consent.</p>
+          <ul class="variant-features">
+            <li><span class="check">✓</span> You trigger each ceremony via <code>/slash-command</code></li>
+            <li><span class="check">✓</span> Approve sprint scope before execution</li>
+            <li><span class="check">✓</span> Review &amp; accept each deliverable</li>
+            <li><span class="check">✓</span> Full visibility into every decision</li>
+            <li><span class="check">✓</span> Step-by-step human control</li>
+          </ul>
+          <div class="variant-who">
+            <strong>You are:</strong> Product Owner — approve scope, accept work
+          </div>
           <div class="variant-best">Best for: Team projects, learning the framework, hands-on control</div>
           <a href="https://github.com/trsdn/copilot-scrum-guided" class="btn btn-primary">Use Guided Template →</a>
         </div>
