@@ -973,6 +973,11 @@ strong { color: var(--text); font-weight: 600; }
 }
 .dod-item:hover { border-color: var(--accent); background: var(--surface-hover); }
 
+.dod-item.dod-highlight {
+  border-color: rgba(108, 99, 255, 0.3);
+  background: rgba(108, 99, 255, 0.05);
+}
+
 .dod-check {
   color: var(--accent);
   font-weight: 800;
