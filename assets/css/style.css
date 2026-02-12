@@ -736,14 +736,84 @@ strong { color: var(--text); font-weight: 600; }
 }
 
 /* Scroll animation for problems */
-.problem, .solution-banner {
+.problem, .solution-banner, .comparison-section {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s, box-shadow 0.3s, background 0.3s;
 }
-.problem.visible, .solution-banner.visible {
+.problem.visible, .solution-banner.visible, .comparison-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ===== Comparison Table ===== */
+.comparison-section {
+  margin-top: 3rem;
+}
+.comparison-section h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.comparison-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.comparison-table thead th {
+  background: var(--surface);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+  white-space: nowrap;
+}
+.comparison-table thead th:first-child {
+  width: 140px;
+}
+.comparison-table tbody td {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+.comparison-table tbody tr:hover td { background: rgba(255,255,255,0.02); }
+
+.row-label {
+  font-weight: 600;
+  color: var(--text) !important;
+  white-space: nowrap;
+}
+
+.col-highlight {
+  background: rgba(108, 99, 255, 0.04) !important;
+  color: var(--text) !important;
+}
+.comparison-table thead .col-highlight {
+  background: rgba(108, 99, 255, 0.12) !important;
+  color: var(--primary-light) !important;
+}
+
+.comparison-note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 1.5rem;
+  font-style: italic;
+  opacity: 0.8;
 }
 
 /* ===== Copilot CLI ===== */
