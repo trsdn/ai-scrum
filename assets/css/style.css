@@ -672,6 +672,76 @@ strong { color: var(--text); font-weight: 600; }
   background: linear-gradient(180deg, rgba(108,99,255,0.05) 0%, var(--surface) 100%);
 }
 
+/* ===== Problem / Why ===== */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.problem {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: all 0.3s;
+  border-top: 2px solid transparent;
+}
+.problem:hover {
+  border-color: var(--border-hover);
+  border-top-color: #e54545;
+  transform: translateY(-4px);
+}
+
+.problem-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.problem h3 { font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 700; }
+.problem p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.65; }
+
+.solution-banner {
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--gradient-subtle);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+.solution-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient);
+}
+.solution-banner h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.solution-banner p { color: var(--text-muted); font-size: 1rem; max-width: 650px; margin: 0 auto; line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .problem-grid { grid-template-columns: 1fr; }
+}
+
+/* Scroll animation for problems */
+.problem, .solution-banner {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s, box-shadow 0.3s, background 0.3s;
+}
+.problem.visible, .solution-banner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== Copilot CLI ===== */
 .copilot-grid {
   display: grid;
