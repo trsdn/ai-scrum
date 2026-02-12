@@ -697,8 +697,8 @@ strong { color: var(--text); font-weight: 600; }
   color: var(--text-secondary);
 }
 
-.variant-autonomous { border-top: 2px solid var(--accent); }
-.variant-guided { border-top: 2px solid var(--primary); }
+.variant-guided { border-top: 2px solid var(--accent); }
+.variant-autonomous { border-top: 2px solid var(--primary); }
 
 .variant-badge {
   display: inline-block;
