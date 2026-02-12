@@ -344,7 +344,7 @@
   <section class="section section-alt" id="sprint">
     <div class="container">
       <h2 class="section-title">The Sprint Cycle</h2>
-      <p class="section-intro">Four ceremonies. Each has a slash command. The AI runs the cycle autonomously.</p>
+      <p class="section-intro">Four ceremonies. Each has a slash command. Human-triggered or fully autonomous — your choice.</p>
       <div class="cycle">
         <div class="cycle-step">
           <div class="step-number">1</div>
@@ -461,7 +461,13 @@
           <div class="step-v-num">1</div>
           <div class="step-v-content">
             <h3>Use the Template</h3>
-            <pre><code>gh repo create my-project \
+            <pre><code># Guided (interactive, you steer)
+gh repo create my-project \
+  --template trsdn/copilot-scrum-guided \
+  --public --clone
+
+# Autonomous (multi-hour, unattended)
+gh repo create my-project \
   --template trsdn/copilot-scrum-autonomous \
   --public --clone</code></pre>
           </div>
@@ -738,43 +744,19 @@ gh issue list --milestone "Sprint 5" --state closed</code></pre>
       <p class="section-intro">Start guided, graduate to autonomous. Same process, same constitution — different level of human presence.</p>
       <div class="variant-grid">
         <div class="card variant-card variant-guided">
-          <div class="variant-header">
-            <div class="card-icon">🎯</div>
-            <h3>Guided</h3>
-            <p class="variant-tagline">Interactive. Step by step.</p>
-          </div>
-          <p>You're at the keyboard. You trigger each ceremony with slash commands, review results, approve scope, and decide what happens next. Sessions last as long as you're engaged.</p>
-          <ul class="variant-features">
-            <li><span class="check">✓</span> You trigger each phase via <code>/slash-command</code></li>
-            <li><span class="check">✓</span> Review &amp; approve before AI proceeds</li>
-            <li><span class="check">✓</span> Full visibility into every decision</li>
-            <li><span class="check">✓</span> Learn the framework hands-on</li>
-            <li><span class="check">✓</span> Session = your working time</li>
-          </ul>
-          <div class="variant-who">
-            <strong>You are:</strong> Product Owner — present, steering, deciding
-          </div>
-          <div class="variant-best">Best for: Learning AI-Scrum, team projects, when you want control</div>
+          <div class="card-icon">🎯</div>
+          <h3>Guided</h3>
+          <p class="variant-tagline">Interactive. Step by step.</p>
+          <p>You trigger each ceremony, review results, approve scope. Sessions last as long as you're engaged.</p>
+          <div class="variant-best">Best for: Learning AI-Scrum, team projects, hands-on control</div>
           <a href="https://github.com/trsdn/copilot-scrum-guided" class="btn btn-primary">Use Guided Template →</a>
         </div>
         <div class="card variant-card variant-autonomous">
-          <div class="variant-header">
-            <div class="card-icon">🤖</div>
-            <h3>Autonomous</h3>
-            <p class="variant-tagline">Runs for hours. Unsupervised.</p>
-          </div>
-          <p>Start a sprint and walk away. The AI agent team plans, implements, tests, reviews, and retros — running for hours without human input. You come back to finished work, documented decisions, and a notification on your phone.</p>
-          <ul class="variant-features">
-            <li><span class="check">✓</span> Multi-hour unattended sessions</li>
-            <li><span class="check">✓</span> Full sprint cycle without human presence</li>
-            <li><span class="check">✓</span> Lead agent dispatches specialized sub-agents</li>
-            <li><span class="check">✓</span> Push notifications when done or stuck</li>
-            <li><span class="check">✓</span> MUST-escalation safety net for critical decisions</li>
-          </ul>
-          <div class="variant-who">
-            <strong>You are:</strong> Stakeholder — set direction, review results later
-          </div>
-          <div class="variant-best">Best for: Solo devs, side projects, overnight runs, maximizing output</div>
+          <div class="card-icon">🤖</div>
+          <h3>Autonomous</h3>
+          <p class="variant-tagline">Runs for hours. Unsupervised.</p>
+          <p>Start a sprint and walk away. The AI agent team runs for hours — you come back to finished work and a notification on your phone.</p>
+          <div class="variant-best">Best for: Solo devs, side projects, overnight runs</div>
           <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="btn btn-primary">Use Autonomous Template →</a>
         </div>
       </div>
