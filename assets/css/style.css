@@ -467,7 +467,7 @@ strong { color: var(--text); font-weight: 600; }
 /* ===== Sprint Cycle ===== */
 .cycle {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 0.75rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -534,7 +534,7 @@ strong { color: var(--text); font-weight: 600; }
   align-items: center;
   font-size: 1.5rem;
   color: var(--text-muted);
-  padding-top: 4rem;
+  align-self: center;
   opacity: 0.4;
 }
 
