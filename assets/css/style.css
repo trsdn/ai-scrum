@@ -483,6 +483,17 @@ strong { color: var(--text); font-weight: 600; }
   padding: 2rem 1.5rem;
   text-align: center;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cycle-step .step-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.cycle-step .step-content code {
+  margin-top: auto;
 }
 .cycle-step:hover {
   border-color: var(--border-hover);
