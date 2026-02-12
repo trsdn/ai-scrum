@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI-Scrum — Human-AI Collaboration Framework</title>
-  <meta name="description" content="A framework for autonomous human-AI software development using GitHub Copilot CLI. The AI runs sprints. You set direction.">
-  <meta property="og:title" content="AI-Scrum — Human-AI Collaboration Framework">
-  <meta property="og:description" content="The AI runs sprints. You set direction. A Scrum-inspired framework for GitHub Copilot CLI.">
+  <meta name="description" content="A Scrum-inspired framework for human-AI software development, optimized for GitHub Copilot CLI. Agents, prompts, sprint ceremonies, quality gates — all ready to use.">
+  <meta property="og:title" content="AI-Scrum — Human-AI Collaboration Framework for Copilot CLI">
+  <meta property="og:description" content="A Scrum-inspired framework for human-AI collaboration, optimized for GitHub Copilot CLI. Agents, prompts, quality gates — ready to use.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trsdn.github.io/ai-scrum/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +25,9 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#manifesto">Manifesto</a>
+        <a href="#constitution">Constitution</a>
         <a href="#sprint">Sprint Cycle</a>
-        <a href="#start">Get Started</a>
+        <a href="#variants">Get Started</a>
         <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="nav-gh">
           <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         </a>
@@ -39,8 +40,8 @@
     <div class="hero-bg"></div>
     <div class="container">
       <div class="hero-badge">Open Source Framework</div>
-      <h1>AI-Scrum<br><span class="gradient-text">Autonomous</span></h1>
-      <p class="hero-subtitle">The AI runs sprints. You set direction.<br>A Scrum-inspired framework for human-AI collaboration using GitHub Copilot CLI.</p>
+      <h1>AI-Scrum</h1>
+      <p class="hero-subtitle">A Scrum-inspired framework for human-AI collaboration,<br>optimized for <strong>GitHub Copilot CLI</strong>.</p>
       <div class="hero-cta">
         <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="btn btn-primary">
           <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
@@ -88,6 +89,41 @@
           <div class="card-icon">📋</div>
           <h3>Template Repository</h3>
           <p>Fork it, customize the placeholders, and you have a fully configured AI development process. Agents, prompts, process docs, sprint templates — everything included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Copilot CLI -->
+  <section class="section section-alt" id="copilot">
+    <div class="container">
+      <h2 class="section-title">Built for GitHub Copilot CLI</h2>
+      <p class="section-intro">Every file in the framework maps to a Copilot CLI feature. No custom tooling needed.</p>
+      
+      <div class="copilot-grid">
+        <div class="copilot-feature">
+          <div class="copilot-file"><code>.github/copilot-instructions.md</code></div>
+          <div class="copilot-desc">Auto-loaded by Copilot CLI on every session. Project rules, safety constraints, agent dispatch — the AI reads this before doing anything.</div>
+        </div>
+        <div class="copilot-feature">
+          <div class="copilot-file"><code>.github/agents/*.agent.md</code></div>
+          <div class="copilot-desc">Custom agents invokable via <code>@agent-name</code>. Each agent has a role, specialized instructions, and domain expertise. 11 agents included.</div>
+        </div>
+        <div class="copilot-feature">
+          <div class="copilot-file"><code>.github/prompts/*.prompt.md</code></div>
+          <div class="copilot-desc">Slash commands invokable via <code>/prompt-name</code>. Sprint ceremonies, orchestration pipelines, code review — 19 prompts ready to use.</div>
+        </div>
+        <div class="copilot-feature">
+          <div class="copilot-file"><code>Plan mode</code> <span class="copilot-builtin">built-in</span></div>
+          <div class="copilot-desc">Copilot CLI's native planning mode (<code>Shift+Tab</code>). Creates structured implementation plans before touching code. The framework integrates with it.</div>
+        </div>
+        <div class="copilot-feature">
+          <div class="copilot-file"><code>Built-in agents</code> <span class="copilot-builtin">built-in</span></div>
+          <div class="copilot-desc">The framework dispatches to <code>explore</code>, <code>task</code>, <code>code-review</code>, and <code>general-purpose</code> agents — Copilot CLI's native agents with full toolsets.</div>
+        </div>
+        <div class="copilot-feature">
+          <div class="copilot-file"><code>SQL database</code> <span class="copilot-builtin">built-in</span></div>
+          <div class="copilot-desc">Per-session SQLite for todo tracking, batch operations, and sprint state. The framework uses it for structured execution without external tools.</div>
         </div>
       </div>
     </div>
@@ -382,25 +418,254 @@ gh label create "priority:low" --color "C5DEF5"</code></pre>
     </div>
   </section>
 
-  <!-- Variants -->
-  <section class="section" id="variants">
+  <!-- Constitution -->
+  <section class="section" id="constitution">
     <div class="container">
-      <h2 class="section-title">Two Variants</h2>
+      <h2 class="section-title">The Process Constitution</h2>
+      <p class="section-intro">Four principles, ranked by priority. When they conflict, higher beats lower.</p>
+      
+      <div class="constitution-pillars">
+        <div class="pillar">
+          <div class="pillar-rank">1</div>
+          <div class="pillar-content">
+            <h3>Protect Focus</h3>
+            <p>Complete what you start. New ideas go to the backlog, not into the current sprint. Never abandon work-in-progress to chase shiny objects.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-rank">2</div>
+          <div class="pillar-content">
+            <h3>Quality Gates</h3>
+            <p>Every change is tested, reviewed, and verified before merge. No exceptions. CI must be green. Evidence must exist.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-rank">3</div>
+          <div class="pillar-content">
+            <h3>Small, Testable Diffs</h3>
+            <p>One feature per PR. ~150 lines ideal, 300 max. Config changes over code changes. Each PR is independently shippable.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-rank">4</div>
+          <div class="pillar-content">
+            <h3>Continuous Improvement</h3>
+            <p>Every retro evaluates the process itself — agents, prompts, workflows. Friction gets automated. Failures get root-caused.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Escalation -->
+  <section class="section section-alt" id="escalation">
+    <div class="container">
+      <h2 class="section-title">Escalation Model</h2>
+      <p class="section-intro">Clear rules for when the AI decides alone and when it must ask.</p>
+      
+      <div class="escalation-grid">
+        <div class="escalation-level level-must">
+          <div class="level-header">
+            <span class="level-icon">⛔</span>
+            <h3>MUST Escalate</h3>
+            <span class="level-desc">Stop and wait</span>
+          </div>
+          <ul>
+            <li>Strategic direction changes</li>
+            <li>ADR creation or modification</li>
+            <li>Constitution amendments</li>
+            <li>New dependencies</li>
+            <li>Production deployments</li>
+            <li>Spending or resource decisions</li>
+          </ul>
+        </div>
+        <div class="escalation-level level-should">
+          <div class="level-header">
+            <span class="level-icon">⚠️</span>
+            <h3>SHOULD Escalate</h3>
+            <span class="level-desc">Notify, continue if no response</span>
+          </div>
+          <ul>
+            <li>Sprint scope &gt; 8 issues</li>
+            <li>Deprioritizing high-priority items</li>
+            <li>Significant refactoring (&gt;500 LOC)</li>
+            <li>Closing &gt;5 stale issues at once</li>
+          </ul>
+        </div>
+        <div class="escalation-level level-auto">
+          <div class="level-header">
+            <span class="level-icon">✅</span>
+            <h3>Autonomous</h3>
+            <span class="level-desc">No escalation needed</span>
+          </div>
+          <ul>
+            <li>Sprint planning + execution</li>
+            <li>Code, tests, documentation</li>
+            <li>Bug fixes with regression tests</li>
+            <li>Config changes, label hygiene</li>
+            <li>Agent/skill improvements</li>
+            <li>Issue creation for new work</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Definition of Done -->
+  <section class="section" id="dod">
+    <div class="container">
+      <h2 class="section-title">Definition of Done</h2>
+      <p class="section-intro">Every issue must meet ALL applicable criteria before closing. No shortcuts.</p>
+      
+      <div class="dod-grid">
+        <div class="dod-item">
+          <div class="dod-check">✓</div>
+          <div class="dod-text">Code implemented, <strong>lint clean</strong>, <strong>types clean</strong></div>
+        </div>
+        <div class="dod-item">
+          <div class="dod-check">✓</div>
+          <div class="dod-text">Unit tests written — min 3 per feature: <strong>happy path</strong>, <strong>edge case</strong>, <strong>parameter effect</strong></div>
+        </div>
+        <div class="dod-item">
+          <div class="dod-check">✓</div>
+          <div class="dod-text">Tests verify <strong>actual behavior changes</strong>, not just "runs without error"</div>
+        </div>
+        <div class="dod-item">
+          <div class="dod-check">✓</div>
+          <div class="dod-text">If bugfix: regression test that <strong>FAILS before</strong> fix, <strong>PASSES after</strong></div>
+        </div>
+        <div class="dod-item">
+          <div class="dod-check">✓</div>
+          <div class="dod-text">PR created, <strong>code-reviewed</strong>, squash-merged</div>
+        </div>
+        <div class="dod-item">
+          <div class="dod-check">✓</div>
+          <div class="dod-text"><strong>CI green</strong> before merge — wait 3-5 min, verify with <code>gh run list</code></div>
+        </div>
+        <div class="dod-item">
+          <div class="dod-check">✓</div>
+          <div class="dod-text">Issue <strong>closed with summary comment</strong>, status labels removed</div>
+        </div>
+        <div class="dod-item">
+          <div class="dod-check">✓</div>
+          <div class="dod-text">Worktree cleaned up</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Issue Management -->
+  <section class="section section-alt" id="issues">
+    <div class="container">
+      <h2 class="section-title">Issue-Driven Development</h2>
+      <p class="section-intro">GitHub Issues are the only task system. No external trackers, no internal todo lists.</p>
+      
+      <div class="flow-visual">
+        <div class="flow-step flow-backlog">
+          <div class="flow-label">Backlog</div>
+          <div class="flow-desc">Open issue, no status label</div>
+        </div>
+        <div class="flow-connector">→</div>
+        <div class="flow-step flow-planned">
+          <div class="flow-label">Planned</div>
+          <div class="flow-desc"><code>status:planned</code></div>
+        </div>
+        <div class="flow-connector">→</div>
+        <div class="flow-step flow-progress">
+          <div class="flow-label">In Progress</div>
+          <div class="flow-desc"><code>status:in-progress</code></div>
+        </div>
+        <div class="flow-connector">→</div>
+        <div class="flow-step flow-validation">
+          <div class="flow-label">Validation</div>
+          <div class="flow-desc"><code>status:validation</code></div>
+        </div>
+        <div class="flow-connector">→</div>
+        <div class="flow-step flow-done">
+          <div class="flow-label">Done</div>
+          <div class="flow-desc">Issue closed</div>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top: 3rem;">
+        <div>
+          <h3>ICE Prioritization</h3>
+          <p class="ice-desc">Score = Impact × Confidence ÷ Effort (each 1-3)</p>
+          <div class="ice-scale">
+            <div class="ice-item ice-high"><span class="ice-score">≥ 4</span> priority:high</div>
+            <div class="ice-item ice-medium"><span class="ice-score">2-3</span> priority:medium</div>
+            <div class="ice-item ice-low"><span class="ice-score">&lt; 2</span> priority:low</div>
+          </div>
+        </div>
+        <div>
+          <h3>Sprint Grouping</h3>
+          <p class="ice-desc">Milestones replace board columns. Full history preserved.</p>
+          <pre><code>gh issue edit 42 --milestone "Sprint 5"
+gh issue list --milestone "Sprint 5"
+gh issue list --milestone "Sprint 5" --state closed</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation -->
+  <section class="section" id="docs">
+    <div class="container">
+      <h2 class="section-title">Documentation as Memory</h2>
+      <p class="section-intro">The AI has no memory between sessions. These artifacts are how continuity survives.</p>
+      
+      <div class="doc-grid">
+        <div class="doc-card">
+          <div class="doc-icon">📋</div>
+          <h3>Sprint Log</h3>
+          <p>Huddle decisions, learnings, blockers — created at sprint start, updated after each issue.</p>
+          <code>docs/sprints/sprint-N-log.md</code>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon">📊</div>
+          <h3>Velocity Data</h3>
+          <p>Sprint-over-sprint performance tracking. Created at retro, used at planning.</p>
+          <code>docs/sprints/velocity.md</code>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon">💬</div>
+          <h3>Issue Comments</h3>
+          <p>Traceable audit trail per issue. Huddle results posted as comments.</p>
+          <code>GitHub Issue #N</code>
+        </div>
+        <div class="doc-card">
+          <div class="doc-icon">🏛️</div>
+          <h3>ADRs</h3>
+          <p>Architectural Decision Records. Immutable unless stakeholder approves change.</p>
+          <code>docs/architecture/ADR.md</code>
+        </div>
+      </div>
+      
+      <div class="doc-rule">
+        <strong>The Huddle Rule:</strong> Results must be documented in <em>two</em> places — comment on the issue (audit trail) and sprint log (retro context).
+      </div>
+    </div>
+  </section>
+
+  <!-- Variants -->
+  <section class="section section-alt" id="variants">
+    <div class="container">
+      <h2 class="section-title">Choose Your Style</h2>
+      <p class="section-intro">Same process, same constitution, same quality gates — different level of human involvement.</p>
       <div class="variant-grid">
-        <div class="card variant-card variant-active">
-          <div class="variant-badge">This Template</div>
+        <div class="card variant-card">
           <div class="card-icon">🤖</div>
           <h3>Autonomous</h3>
-          <p>AI is PO + Scrum Master. Human is stakeholder. The AI runs sprints end-to-end and only escalates on MUST criteria.</p>
+          <p>AI is PO + Scrum Master. Human is stakeholder. The AI runs sprints end-to-end and only escalates on MUST criteria. Sprint reviews are async notifications.</p>
           <div class="variant-best">Best for: Solo projects, side projects, autonomous workflows</div>
-          <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="btn btn-primary">Use Template →</a>
+          <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="btn btn-primary">Use Autonomous Template →</a>
         </div>
         <div class="card variant-card">
           <div class="card-icon">🎯</div>
           <h3>Guided</h3>
-          <p>Human is PO. AI is Scrum Master + developer. You drive each phase with slash commands and approval gates.</p>
+          <p>Human is PO. AI is Scrum Master + developer. You drive each phase with slash commands, approve scope, and control execution. Every ceremony needs your consent.</p>
           <div class="variant-best">Best for: Team projects, learning the framework, hands-on control</div>
-          <a href="https://github.com/trsdn/copilot-scrum-guided" class="btn btn-secondary">View Guided →</a>
+          <a href="https://github.com/trsdn/copilot-scrum-guided" class="btn btn-primary">Use Guided Template →</a>
         </div>
       </div>
     </div>
