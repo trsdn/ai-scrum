@@ -1032,6 +1032,26 @@ strong { color: var(--text); font-weight: 600; }
 .level-should li::before { color: #e5a545; }
 .level-auto li::before { color: var(--accent); }
 
+/* ===== Drift Control ===== */
+.drift-layers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.drift-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+.drift-card .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.drift-card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; font-weight: 700; }
+.drift-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; }
+
+@media (max-width: 768px) {
+  .drift-layers { grid-template-columns: 1fr; }
+}
+
 /* ===== Definition of Done ===== */
 .dod-grid {
   max-width: 700px;

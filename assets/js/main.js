@@ -1,7 +1,7 @@
 // Scroll reveal animation with stagger
 document.addEventListener('DOMContentLoaded', () => {
   const animatedElements = document.querySelectorAll(
-    '.card, .cycle-step, .value, .principle, .step-v, .model-role, .feature, .pillar, .escalation-level, .dod-item, .flow-step, .doc-card, .copilot-feature, .problem, .solution-banner, .comparison-section, .mode-card'
+    '.card, .cycle-step, .value, .principle, .step-v, .model-role, .feature, .pillar, .escalation-level, .dod-item, .flow-step, .doc-card, .copilot-feature, .problem, .solution-banner, .comparison-section, .mode-card, .drift-card'
   );
 
   const observer = new IntersectionObserver((entries) => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const el = entry.target;
         const parent = el.parentElement;
         const siblings = Array.from(parent.children).filter(
-          child => child.matches('.card, .cycle-step, .value, .principle, .step-v, .model-role, .feature, .pillar, .escalation-level, .dod-item, .flow-step, .doc-card, .copilot-feature, .problem, .solution-banner, .comparison-section, .mode-card')
+          child => child.matches('.card, .cycle-step, .value, .principle, .step-v, .model-role, .feature, .pillar, .escalation-level, .dod-item, .flow-step, .doc-card, .copilot-feature, .problem, .solution-banner, .comparison-section, .mode-card, .drift-card')
         );
         const index = siblings.indexOf(el);
 

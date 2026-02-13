@@ -26,6 +26,7 @@
         <a href="#about">About</a>
         <a href="#manifesto">Manifesto</a>
         <a href="#constitution">Constitution</a>
+        <a href="#drift">Drift Control</a>
         <a href="#sprint">Sprint Cycle</a>
         <a href="#variants">Get Started</a>
         <a href="https://github.com/trsdn/copilot-scrum-autonomous" class="nav-gh">
@@ -588,6 +589,7 @@ gh label create "priority:low" --color "C5DEF5"</code></pre>
             <li>New dependencies</li>
             <li>Production deployments</li>
             <li>Spending or resource decisions</li>
+            <li>Sprint scope drift (&gt;2 unplanned issues)</li>
           </ul>
         </div>
         <div class="escalation-level level-should">
@@ -617,6 +619,32 @@ gh label create "priority:low" --color "C5DEF5"</code></pre>
             <li>Agent/skill improvements</li>
             <li>Issue creation for new work</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drift Control -->
+  <section class="section" id="drift">
+    <div class="container">
+      <h2 class="section-title">Drift Control</h2>
+      <p class="section-intro">Autonomous execution needs guardrails. Individual commits can be valid while the project silently drifts off course.</p>
+
+      <div class="drift-layers">
+        <div class="card drift-card">
+          <div class="card-icon">🔒</div>
+          <h3>Sprint Scope Lock</h3>
+          <p>Only planned issues may be executed. Discovered work goes to backlog — never into the current sprint. If &gt;2 unplanned issues are created, the AI must escalate.</p>
+        </div>
+        <div class="card drift-card">
+          <div class="card-icon">📋</div>
+          <h3>Drift Check at Every Huddle</h3>
+          <p>After each issue: Was this planned? Are files related to sprint scope? Is the goal still achievable? If any check fails — stop and escalate.</p>
+        </div>
+        <div class="card drift-card">
+          <div class="card-icon">📊</div>
+          <h3>Sprint Boundary Review</h3>
+          <p>At sprint review: holistic <code>git diff --stat</code> across all changes. Flag files that don't relate to any sprint issue. Report planned vs unplanned work.</p>
         </div>
       </div>
     </div>
