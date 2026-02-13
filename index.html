@@ -370,10 +370,19 @@
   <section class="section section-alt" id="sprint">
     <div class="container">
       <h2 class="section-title">The Sprint Cycle</h2>
-      <p class="section-intro">Four ceremonies. Each has a slash command. Human-triggered or fully autonomous — your choice.</p>
+      <p class="section-intro">Five ceremonies. Each has a slash command. Human-triggered or fully autonomous — your choice.</p>
       <div class="cycle">
         <div class="cycle-step">
           <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Refinement</h3>
+            <p>Stakeholder drops ideas. AI researches, decomposes into concrete issues with acceptance criteria.</p>
+            <code>/refine</code>
+          </div>
+        </div>
+        <div class="cycle-arrow">→</div>
+        <div class="cycle-step">
+          <div class="step-number">2</div>
           <div class="step-content">
             <h3>Sprint Planning</h3>
             <p>AI triages backlog, scores issues (ICE), selects scope, assigns labels and milestones.</p>
@@ -382,7 +391,7 @@
         </div>
         <div class="cycle-arrow">→</div>
         <div class="cycle-step">
-          <div class="step-number">2</div>
+          <div class="step-number">3</div>
           <div class="step-content">
             <h3>Sprint Execution</h3>
             <p>AI implements issues with quality gates. Huddle after each issue. Tests required for every feature.</p>
@@ -391,7 +400,7 @@
         </div>
         <div class="cycle-arrow">→</div>
         <div class="cycle-step">
-          <div class="step-number">3</div>
+          <div class="step-number">4</div>
           <div class="step-content">
             <h3>Sprint Review</h3>
             <p>Demo deliverables, metrics, velocity tracking. Stakeholder accepts or requests changes.</p>
@@ -400,7 +409,7 @@
         </div>
         <div class="cycle-arrow">→</div>
         <div class="cycle-step">
-          <div class="step-number">4</div>
+          <div class="step-number">5</div>
           <div class="step-content">
             <h3>Sprint Retro</h3>
             <p>What went well, what didn't. Process improvements. The process that improves itself.</p>
@@ -514,16 +523,24 @@ gh label create "status:in-progress" --color "FBCA04"
 gh label create "status:validation" --color "1D76DB"
 gh label create "priority:high" --color "B60205"
 gh label create "priority:medium" --color "F9D0C4"
-gh label create "priority:low" --color "C5DEF5"</code></pre>
+gh label create "priority:low" --color "C5DEF5"
+gh label create "type:idea" --color "D4C5F9"</code></pre>
           </div>
         </div>
         <div class="step-v">
           <div class="step-v-num">4</div>
           <div class="step-v-content">
-            <h3>Start Your First Sprint</h3>
-            <pre><code># Open GitHub Copilot CLI in your repo:
+            <h3>Drop Ideas &amp; Start</h3>
+            <pre><code># Create an idea:
+gh issue create --title "idea: Your feature" \
+  --label "type:idea" --body "Brief description"
+
+# Refine ideas into concrete issues:
+/refine
+
+# Plan and run your first sprint:
 /sprint-planning</code></pre>
-            <p>The AI will triage your backlog, score issues, propose a sprint scope, and wait for your approval.</p>
+            <p>The AI refines your ideas into concrete issues, then plans and executes sprints.</p>
           </div>
         </div>
       </div>
