@@ -561,9 +561,16 @@ gh issue create --title "idea: Your feature" \
   <section class="section" id="constitution">
     <div class="container">
       <h2 class="section-title">The Process Constitution</h2>
-      <p class="section-intro">Four principles, ranked by priority. When they conflict, higher beats lower.</p>
+      <p class="section-intro">Five principles, ranked by priority. When they conflict, higher beats lower.</p>
       
       <div class="constitution-pillars">
+        <div class="pillar">
+          <div class="pillar-rank">0</div>
+          <div class="pillar-content">
+            <h3>Stakeholder Authority</h3>
+            <p>The human decides <strong>what</strong> and <strong>why</strong>. The AI decides <strong>how</strong>. Stakeholder-created issues must not be deprioritized, descoped, or closed without approval. ICE scoring is advisory — human intent overrides it.</p>
+          </div>
+        </div>
         <div class="pillar">
           <div class="pillar-rank">1</div>
           <div class="pillar-content">
@@ -617,6 +624,7 @@ gh issue create --title "idea: Your feature" \
             <li>Production deployments</li>
             <li>Spending or resource decisions</li>
             <li>Sprint scope drift (&gt;2 unplanned issues)</li>
+            <li>Modifying stakeholder intent (descoping, deprioritizing, closing stakeholder issues)</li>
           </ul>
         </div>
         <div class="escalation-level level-should">
