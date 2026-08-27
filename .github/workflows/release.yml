@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # Re-run the same checks CI runs, so a tag can never publish a broken site.
+      - name: Check site structure, local assets and in-page anchors
+        run: python3 .github/scripts/check_site.py .
+
+      - name: Extract release notes from CHANGELOG.md
+        id: notes
+        run: |
+          python3 .github/scripts/extract_changelog.py "${GITHUB_REF_NAME}" \
+            > "${RUNNER_TEMP}/release-notes.md"
+          echo "path=${RUNNER_TEMP}/release-notes.md" >> "${GITHUB_OUTPUT}"
+
+      # This repository publishes a website, not a package: the release is a
+      # tagged snapshot plus notes. There is deliberately no artifact to upload.
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NOTES: ${{ steps.notes.outputs.path }}
+        run: >-
+          gh release create "${GITHUB_REF_NAME}"
+          --repo "${GITHUB_REPOSITORY}"
+          --title "${GITHUB_REF_NAME}"
+          --notes-file "${NOTES}"
+          --verify-tag

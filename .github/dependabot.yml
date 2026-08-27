@@ -1,0 +1,13 @@
+# The site has no package manifest — no npm, pip, or bundler dependencies are
+# committed to this repository — so GitHub Actions is the only ecosystem
+# Dependabot can meaningfully track here.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: chore
+    labels:
+      - dependencies
