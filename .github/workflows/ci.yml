@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  site-structure:
+    name: Site structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # Standard library only, so no install step is needed.
+      - name: Check site structure, local assets and in-page anchors
+        run: python3 .github/scripts/check_site.py .
+
+  html:
+    name: HTML and JavaScript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Validate HTML5 and WCAG rules
+        run: >-
+          npx --yes html-validate@9.7.1
+          --config .github/linters/html-validate.json
+          index.html
+
+      - name: Check JavaScript syntax
+        run: node --check assets/js/main.js
